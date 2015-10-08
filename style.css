@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+  text-align: left;
+}
+
+.navigation > li {
+  list-style: none;
+  display: inline;
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+ }
+
+.navigation > li:hover {
+  background-color: white;
+}
+
+.navigation {
+	border: solid;
+	padding: 20px;
+}
+
+#menuBar {
+	background: #FFB4B0;
+	width: 100%;
+}
