@@ -3,6 +3,33 @@ body {
   text-align: left;
 }
 
+.bordered {
+  border: solid;
+  padding: 10px;
+}
+
+#sideBar {
+  width: 29%;
+  background-color: #4DD7FA;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, input[type="range"] {
+  margin-bottom: 15px;
+}
+
+.blockDisplay {
+  display: block;
+}
+
+.cleared {
+  clear: both;
+}
+
 .navigation > li {
   list-style: none;
   display: inline;
