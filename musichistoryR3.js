@@ -13,30 +13,37 @@ console.log("Songs Added Array", songs);
 
 var output = "";
 var dash = "";
+var songArray = []
 var artistAlbum = [];
-
-for (var i = 0; i < songs.length; i++) {
-songs[i] = songs[i].replace(/\*/g, "");
-	songs[i] = songs[i].replace(/@/g, "");
-	songs[i] = songs[i].replace(/\(/g, "");
-	songs[i] = songs[i].replace(/!/g, "");
-	songs[i] = songs[i].replace(/>/g, "-");
-
-	dash = songs[i].indexOf("-");
-	console.log("index of dash", dash);
+var songList = document.getElementById('insertHTML');
 
 
-	if (dash !== -1) {
-		artistAlbum[i] = songs[i].slice(dash + 1);
-		songs[i] = songs[i].slice(0, dash);
+function updateSongList () {
+	for (var i = 0; i < songs.length; i++) {
+	songs[i] = songs[i].replace(/\*/g, "");
+		songs[i] = songs[i].replace(/@/g, "");
+		songs[i] = songs[i].replace(/\(/g, "");
+		songs[i] = songs[i].replace(/!/g, "");
+		songs[i] = songs[i].replace(/>/g, "-");
+
+		dash = songs[i].indexOf("-");
+		console.log("index of dash", dash);
+
+
+		if (dash !== -1) {
+			artistAlbum[i] = songs[i].slice(dash + 1);
+			songs[i] = songs[i].slice(0, dash);
+		}
+
+		console.log("Songs[i]", songs[i]);
+		console.log("artistAlbum", artistAlbum);
+
+		output += "<section><h2>" + songs[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
 	}
-
-	console.log("Songs[i]", songs[i]);
-	console.log("artistAlbum", artistAlbum);
-
-	output += "<section><h2>" + songs[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
-
+	songList.innerHTML += output;
 }
+
+updateSongList();
 
 console.log("output", output);
 
@@ -49,7 +56,7 @@ console.log("insertHTML", insertHTML)
 // document.getElementById("insertHTML")
 
 
-document.getElementById('insertHTML').innerHTML = output;
+
 
 
 //Creating Add Music Page:
@@ -103,6 +110,7 @@ function inputTest () {
 	console.log("artist input test", artistNameInput.value);
 	console.log("album input test", albumNameInput.value);
 	songs.unshift(songNameInput.value + " - by " + artistNameInput.value + " on the album " + albumNameInput.value);
+	updateSongList();
 }
 
 addButton.addEventListener("click", inputTest);
