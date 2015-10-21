@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nashville Software School</title>
+  
+  <link rel="stylesheet" type="text/css" href="styleR2.css">
+
+</head>
+
+<body>
+  
+  <nav class="fixed">
+    <div id="menuBar">
+      <ul class="navigation">
+        <li class="viewMusic">View Music</li>
+        |
+        <li>Add Music</li>
+        |
+        <li>Profile</li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="hidden">
+    <div id="menuBar">
+      <ul class="navigation">
+        <li class="viewMusic">View Music</li>
+        |
+        <li>Add Music</li>
+        |
+        <li>Profile</li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="fullWidthDiv">
+    <div id="sideBar" class="bordered">
+      <form action="musicform.html" method="POST">
+
+        <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
+
+        <label for="artist-select">Artist:</label>
+        <select name="artist-select">
+          <option>Options</option>
+          <option>Spoon</option>
+          <option>My Morning Jacket</option>
+          <option>Fleet Foxes</option>
+          <option>David Ramirez</option>
+          <option>Van Morrison</option>
+        </select>
+
+        <label for="album-select">Album:</label>
+        <select name="album-select">
+          <option>Options</option>
+          <option>Ga Ga Ga Ga Ga</option>
+          <option>They Want My Soul</option>
+          <option>Circuital</option>
+          <option>The Waterfall</option>
+          <option>Fleet Foxes</option>
+          <option>Helplessness Blues</option>
+          <option>The Rooster</option>
+          <option>Fables</option>
+          <option>Tupelo Honey</option>
+          <option>Pay The Devil</option>
+        </select>
+
+        <label for="genre">Genre:</label>
+        <table>
+          <tr>
+            <td><input type="checkbox" name="genre" value="rock">Rock</td>
+            <td> <input type="checkbox" name="genre" value="classical">Classical
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="genre" value="Pop">Pop</td>
+            <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
+            <tr>
+            <td><input type="checkbox" name="genre" value="Bles">Blues</td>
+            <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
+        </table>
+        <div class="centered">
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </div>
+    
+    <div id="insertHTML" class="main even-songs odd-songs bold-song">
+     
+
+      
+    </div>
+
+  </div>
+
+  <script src="musichistoryR2.js"></script>
+
+</body>
+</html>

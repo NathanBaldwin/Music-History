@@ -34,12 +34,7 @@ for (var i = 0; i < songs.length; i++) {
 	console.log("Songs[i]", songs[i]);
 	console.log("artistAlbum", artistAlbum);
 
-	output = output + "<h2>";
-	output = output + songs[i];
-	output = output + "</h2>";
-	output = output + "<h4>";
-	output = output + artistAlbum[i];
-	output = output + "</h4>";
+	output += "<section><h2>" + songs[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
 
 }
 
@@ -55,6 +50,4 @@ console.log("insertHTML", insertHTML)
 
 
 document.getElementById('insertHTML').innerHTML = output;
-
-songcontainer.innerHTML = output;
 

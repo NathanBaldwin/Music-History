@@ -6,6 +6,9 @@ body {
 h2 {
   font-weight: 100;
   margin-left: 20px;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
   margin-bottom: 10px;
   color: #785616;
 }
@@ -15,6 +18,20 @@ h4 {
   margin-left: 20px;
   margin-top: 0;
   font-size: .9em;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 5;
+  right: 5;
+  width: 99%;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .bordered {
@@ -22,11 +39,39 @@ h4 {
   padding: 10px 10px 9px 13px;
 }
 
+#fullWidthDiv {
+  margin: 0;
+  width: 100%;
+}
+
 #sideBar {
   width: 159px;
   background-color: #4DD7FA;
   float: left;
   margin-right: 15px;
+}
+
+.main {
+  width: 1215px;
+  border: solid;
+  background-color: #FEFAC0;
+  float: left;
+}
+
+.even-songs section:nth-child(2n+0) {
+  background-color: SeaShell;
+}
+
+.odd-songs section:nth-child(2n+1) {
+  background-color: MintCream;
+}
+
+.bold-song section:first-of-type > h2 {
+  font-weight: bold;
+}
+
+.bold-song section:first-of-type > h4 {
+  font-weight: bold;
 }
 
 .centered {
@@ -48,12 +93,6 @@ select, input[type="range"] {
   display: block;
 }
 
-#fullWidthDiv {
-  display: flex;
-  width: 100%;
-  -webkit-flex-direction: row;
-  -webkit-flex-wrap: wrap;
-}
 
 .cleared {
   clear: both;
@@ -67,7 +106,7 @@ select, input[type="range"] {
   color: blue;
  }
 
-.viewMusic {
+.list-music {
   text-decoration: none;
   color: black;
 }
@@ -77,8 +116,8 @@ select, input[type="range"] {
 }
 
 .navigation {
-	border: solid;
-	padding: 20px;
+  border: solid;
+  padding: 20px;
 }
 
 input[type="submit"] {
@@ -87,20 +126,32 @@ input[type="submit"] {
 }
 
 #menuBar {
-	background: #FFB4B0;
-	width: 100%;
+  background: #FFB4B0;
+  width: 100%;
 }
 
-.main {
-  width: 1215px;
-  border: solid;
-  background-color: #FEFAC0;
-  float: left;
-}
+/* Add Music Page: */
 
-#add-music > input {
+#add-music > div > label {
   display: inline;
+  margin-right: 10px;
 }
+
+#add-music > div {
+  margin: 8px;
+}
+
+#add-button {
+  margin-left: 8px;
+}
+
+.display-none {
+  display: none;
+}
+
+
+
+
 
 
 
