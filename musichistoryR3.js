@@ -19,6 +19,9 @@ var songList = document.getElementById('insertHTML');
 
 
 function updateSongList () {
+
+	output = "";
+
 	for (var i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace(/\*/g, "");
 		songs[i] = songs[i].replace(/@/g, "");
@@ -32,15 +35,16 @@ function updateSongList () {
 
 		if (dash !== -1) {
 			artistAlbum[i] = songs[i].slice(dash + 1);
-			songs[i] = songs[i].slice(0, dash);
+			songArray[i] = songs[i].slice(0, dash);
 		}
 
-		console.log("Songs[i]", songs[i]);
-		console.log("artistAlbum", artistAlbum);
+	console.log("songArray", songArray);
+	console.log("artistAlbum", artistAlbum);
 
-		output += "<section><h2>" + songs[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
+	output += "<section><h2>" + songArray[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
 	}
-	songList.innerHTML += output;
+
+	songList.innerHTML = output;
 }
 
 updateSongList();
@@ -79,6 +83,9 @@ function addMusicSwitch () {
 	console.log("you clicked add music");
 	listMusicPage.classList.add("display-none");
 	addMusicPage.classList.remove("display-none");
+	songNameInput.value = "";
+	artistNameInput.value = "";
+	albumNameInput.value = "";
 }
 
 addMusicButton.addEventListener("click", addMusicSwitch);
@@ -95,25 +102,20 @@ listMusicButton.addEventListener("click", listMusicSwitch);
 
 	//Add Button functionality:
 
-function addMusic () {
-	console.log("you clicked add!");
-}
-
-addButton.addEventListener("click", addMusic);
-
 var songNameInput = document.getElementById("song-name");
 var artistNameInput = document.getElementById("artist");
 var albumNameInput = document.getElementById("album");
 
-function inputTest () {
+function addMusic () {
 	console.log("song input test", songNameInput.value);
 	console.log("artist input test", artistNameInput.value);
 	console.log("album input test", albumNameInput.value);
 	songs.unshift(songNameInput.value + " - by " + artistNameInput.value + " on the album " + albumNameInput.value);
 	updateSongList();
+
 }
 
-addButton.addEventListener("click", inputTest);
+addButton.addEventListener("click", addMusic);
 
 
 
