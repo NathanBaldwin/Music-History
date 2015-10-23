@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
   text-align: left;
+  background-image: url(./images/leadguitar.jpg);
 }
 
 h2 {
@@ -10,7 +11,7 @@ h2 {
   padding-top: 10px;
   padding-bottom: 0;
   margin-bottom: 10px;
-  color: #785616;
+  color: green;
 }
 
 h4 {
@@ -28,14 +29,15 @@ nav.fixed {
   left: 5;
   right: 5;
   width: 99%;
+
 }
 
 .hidden {
   visibility: hidden;
 }
 
-.bordered {
-  border: solid;
+.bordered { 
+  border-radius: 5px;
   padding: 10px 10px 9px 13px;
 }
 
@@ -46,24 +48,24 @@ nav.fixed {
 
 #sideBar {
   width: 159px;
-  background-color: #4DD7FA;
+  background-color: rgba(207, 207, 207, 0.5);
   float: left;
   margin-right: 15px;
 }
 
 .main {
   width: 1215px;
-  border: solid;
-  background-color: #FEFAC0;
+  background-color: rgba(207, 207, 207, 0.5);
   float: left;
+  border-radius: 5px;
 }
 
 .even-songs section:nth-child(2n+0) {
-  background-color: SeaShell;
+  background-color: rgba(207, 207, 207, 0.5);
 }
 
 .odd-songs section:nth-child(2n+1) {
-  background-color: MintCream;
+  background-color: rgba(207, 207, 207, 0.5);
 }
 
 .bold-song section:first-of-type > h2 {
@@ -103,7 +105,7 @@ select, input[type="range"] {
   display: inline;
   text-decoration: underline;
   cursor: pointer;
-  color: blue;
+  color: green;
  }
 
 .list-music {
@@ -116,7 +118,8 @@ select, input[type="range"] {
 }
 
 .navigation {
-  border: solid;
+  border: none;
+  border-radius: 5px;
   padding: 20px;
 }
 
@@ -126,8 +129,9 @@ input[type="submit"] {
 }
 
 #menuBar {
-  background: #FFB4B0;
+  background-color: rgba(207, 207, 207, 0.5);
   width: 100%;
+  border-radius: 5px;
 }
 
 /* Add Music Page: */

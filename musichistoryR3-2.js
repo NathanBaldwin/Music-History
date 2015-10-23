@@ -1,4 +1,4 @@
-js $(document).ready(function() { 	
+$(document).ready(function() { 	
 
 
 var songs = [];
@@ -18,7 +18,7 @@ var output = "";
 var dash = "";
 var songArray = []
 var artistAlbum = [];
-var songList = document.getElementById('insertHTML');
+var songList = $("#insertHTML");
 
 
 function updateSongList () {
@@ -47,7 +47,7 @@ function updateSongList () {
 	output += "<section><h2>" + songArray[i] + "</h2> <h4>" + artistAlbum[i] + "</h4></section>";
 	}
 
-	songList.innerHTML = output;
+	songList.html(output);
 }
 
 updateSongList();
@@ -60,7 +60,7 @@ console.log("test")
 
 console.log("insertHTML", insertHTML)
 // console.log('inner HTML', insertHTML.innerHTML)
-// document.getElementById("insertHTML")
+// $("insertHTML")
 
 
 
@@ -68,11 +68,11 @@ console.log("insertHTML", insertHTML)
 
 //Creating Add Music Page:
 
-var addMusicButton = document.getElementById("add-music-button");
-var listMusicPage = document.getElementById("fullWidthDiv");
-var addMusicPage = document.getElementById("add-music");
-var listMusicButton = document.getElementById("list-music");
-var addButton = document.getElementById("add-button");
+var addMusicButton = $("#add-music-button");
+var listMusicPage = $("#fullWidthDiv");
+var addMusicPage = $("#add-music");
+var listMusicButton = $("#list-music");
+var addButton = $("#add-button");
 
 console.log("list music button", listMusicButton);
 
@@ -84,41 +84,41 @@ console.log("add button", addButton);
 
 function addMusicSwitch () {
 	console.log("you clicked add music");
-	listMusicPage.classList.add("display-none");
-	addMusicPage.classList.remove("display-none");
-	songNameInput.value = "";
-	artistNameInput.value = "";
-	albumNameInput.value = "";
+	listMusicPage.hide();
+	addMusicPage.show();
+	songNameInput.val("")
+	artistNameInput.val("");
+	albumNameInput.val("");
 }
 
-addMusicButton.addEventListener("click", addMusicSwitch);
+addMusicButton.click(addMusicSwitch);
 
 	//List Music button will switch pages:
 
 function listMusicSwitch () {
 	console.log("you clicked list music");
-	listMusicPage.classList.remove("display-none");
-	addMusicPage.classList.add("display-none");
+	listMusicPage.show();
+	addMusicPage.hide();
 }
 
-listMusicButton.addEventListener("click", listMusicSwitch);
+listMusicButton.click(listMusicSwitch);
 
 	//Add Button functionality:
 
-var songNameInput = document.getElementById("song-name");
-var artistNameInput = document.getElementById("artist");
-var albumNameInput = document.getElementById("album");
+var songNameInput = $("#song-name");
+var artistNameInput = $("#artist");
+var albumNameInput = $("#album");
 
 function addMusic () {
-	console.log("song input test", songNameInput.value);
-	console.log("artist input test", artistNameInput.value);
-	console.log("album input test", albumNameInput.value);
-	songs.unshift(songNameInput.value + " - by " + artistNameInput.value + " on the album " + albumNameInput.value);
+	console.log("song input test", songNameInput.val());
+	console.log("artist input test", artistNameInput.val());
+	console.log("album input test", albumNameInput.val());
+	songs.unshift(songNameInput.val() + " - by " + artistNameInput.val() + " on the album " + albumNameInput.val());
 	updateSongList();
 
 }
 
-addButton.addEventListener("click", addMusic);
+addButton.click(addMusic);
 
 
 
