@@ -142,7 +142,7 @@ bodyListener.on('click', '.delete', function () {
 	console.log("event", event);
 	var thisElement = event.target;
 	console.log("event.target", thisElement);
-	thisElement.parent().remove();
+	$(thisElement).parent().remove();
 });
 
 
