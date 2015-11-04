@@ -1,0 +1,70 @@
+body {
+  padding-top: 75px;
+  font: Helvetica, sans-serif;
+  color: #333;
+  font-family: Arial;
+  text-align: left;
+  background-image: url(../images/leadguitar.jpg); }
+
+nav {
+  background-color: #000000;
+  font-size: 1.2em; }
+
+.nav-style {
+  padding: 8px;
+  color: green; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  background-color: green; }
+
+.nav-color {
+  color: green; }
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: #989EA3; }
+
+table {
+  margin-bottom: 8px; }
+
+.container-fluid {
+  padding-left: 0px; }
+
+#sideBar {
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  background-color: #262626;
+  left: 0;
+  margin-left: 0;
+  height: 100%; }
+
+.form-style {
+  margin-right: 0px;
+  padding-right: 0px; }
+
+select {
+  margin-bottom: 12px;
+  width: 100px; }
+
+input[type="range"] {
+  width: 150px;
+  margin-bottom: 8px; }
+
+/* Add Music Page: */
+#add-music > div > label {
+  display: inline;
+  margin-right: 10px; }
+
+#add-music > div {
+  margin: 8px; }
+
+#add-button {
+  margin-left: 8px; }
+
+.display-none {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
