@@ -1,0 +1,20 @@
+{
+	"songList": [
+		{
+			"songTitle": "Helplessness Blues",
+			"artist": "Fleet Foxes",
+			"album": "Helplessness Blues"
+		},
+		{
+			"songTitle": "Wild Night",
+			"artist": "Van Morrison",
+			"album": "Tupelo Honey"
+		},
+		{
+			"songTitle": "Whole Lotta Love",
+			"artist": "Led Zeppelin",
+			"album": "Led Zeppelin II"
+		}
+	]
+
+}
