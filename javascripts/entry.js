@@ -15,8 +15,6 @@ requirejs.config({
 require(
 	["jquery", "bootstrap", "musichistoryR4"],
 	function($, bootstrap, musichistoryR4) {
-		console.log("jquery", $);
-		console.log("bootstrap", bootstrap);
-		console.log("musichistoryR4", musichistoryR4);
+		
 	}
 );

@@ -1,7 +1,9 @@
 
 
-define(["jquery"],
-	function($) {
+define(["jquery", "songs"],
+	function($, songs) {
+
+console.log("music hist > songs.songList", songs);
 
 var songs = [];
 
