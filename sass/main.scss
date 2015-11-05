@@ -1,0 +1,198 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  padding-top: 75px;
+  padding-left: 200px;
+  font: $font-stack;
+  color: $primary-color;
+  //height: 100%;
+  font-family: Arial;
+  text-align: left;
+  background-image: url(../images/crowd.jpeg);
+  //background-repeat: no-repeat;
+  background-size: cover;
+  //background-size: 100% auto;
+  background-color: gray;
+  opacity: 0.75;
+  position: static;
+}
+
+.hard-left {
+  padding-left: 0px;
+}
+
+nav {
+background-color: #000000;
+font-size: 1.2em;
+}
+
+.nav-style {
+  padding: 8px;
+  color: green;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  background-color: green;
+}
+
+.nav-color {
+  color: green;
+}
+
+#main-container {
+  background-color: #262729;
+  //background-color: #1A1B1C;
+  //height: 500px;
+  
+}
+
+#main-container section {
+  border-bottom: solid black 3px;
+}
+
+section > h4 {
+  margin-bottom: 10px;
+}
+
+
+h2 {
+  margin-top: 5px;
+  
+}
+
+h4 {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: #989EA3;
+}
+
+table {
+  margin-bottom: 8px;
+}
+
+.container-fluid {
+  padding-left: 0px;
+}
+
+.bordered { 
+  
+}
+
+#fullWidthDiv {
+  
+}
+
+// .fixed {
+//   margin-left: 0px;
+//   padding-left 0px;
+// }
+
+#sideBar {
+  position: fixed;
+  width: 200px;
+  height: 500px;
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  background-color: #1A1B1C;
+  left: 0;
+  margin-left: 0;
+  height: 100%;
+  border-right: solid black 4px;
+  
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.form-style {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.main {
+  
+}
+
+.bold-song section:first-of-type > h2 {
+  
+}
+
+.bold-song section:first-of-type > h4 {
+  
+}
+
+.centered {
+  
+}
+
+form {
+}
+
+label {
+  
+}
+
+select {
+  margin-bottom: 12px;
+  width: 100px;
+}
+
+input[type="range"] {
+  width: 150px;
+  margin-bottom: 8px;
+}
+
+.blockDisplay {
+  
+}
+
+
+.cleared {
+  
+}
+
+.navigation > li {
+  
+ }
+
+.list-music {
+  
+}
+
+.navigation > li:hover {
+  
+}
+
+.navigation {
+  
+}
+
+/* Add Music Page: */
+
+#add-music > div > label {
+  display: inline;
+  margin-right: 10px;
+}
+
+#add-music > div {
+  margin: 8px;
+}
+
+#add-button {
+  margin-left: 8px;
+}
+
+.display-none {
+  display: none;
+}
+
+
+
+
+
+
+

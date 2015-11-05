@@ -5,112 +5,121 @@
   <meta charset="utf-8">
   <title>Nashville Software School</title>
   
-  <link rel="stylesheet" type="text/css" href="styleR4.css">
+  <link href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  
 
 </head>
 
 <body>
-  
-  <nav class="fixed">
-    <div id="menuBar">
-      <ul class="navigation">
-        <li id="list-music">List Music</li>
-        |
-        <li id="add-music-button">Add Music</li>
-        |
-        <li>Profile</li>
+
+  <nav class="navbar-fixed-top">
+    <div class="container-fluid nav-style">
+      <ul class="nav nav-pills nav-style">
+          <li role="presentation" class="active nav-color"><a id="list-music" class="nav-color" href="#">List Music</a></li>
+          <li role="presentation" ><a id="add-music-button" href="#" class="nav-color">Add Music</a></li>
       </ul>
     </div>
   </nav>
 
-  <nav class="hidden">
-    <div id="menuBar">
-      <ul class="navigation">
-        <li class="viewMusic">View Music</li>
-        |
-        <li>Add Music</li>
-        |
-        <li>Profile</li>
-      </ul>
-    </div>
-  </nav>
-  
-  <div id="fullWidthDiv">
-    <div id="sideBar" class="bordered">
-      <form action="musicform.html" method="POST">
+  <div id="list-music-page">
+    <div class="container">
+      <div id="sideBar" class="col-md-2 bordered">
+        <form class="form-style" action="musicform.html" method="POST">
 
-        <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
+          <div>
+            
+          <label for="song-length"><h4>Song Length:</h4></label><input type="range" name="song-length" min="0" max="10" step=".5">
+          </div>
 
-        <label for="artist-select">Artist:</label>
-        <select name="artist-select">
-          <option>Options</option>
-          <option>Spoon</option>
-          <option>My Morning Jacket</option>
-          <option>Fleet Foxes</option>
-          <option>David Ramirez</option>
-          <option>Van Morrison</option>
-        </select>
+          <div>
+            <label for="artist-select"><h4>Artist:</h4></label>
+          </div>
+            <select name="artist-select">
+              <option>Options</option>
+              <option>Spoon</option>
+              <option>My Morning Jacket</option>
+              <option>Fleet Foxes</option>
+              <option>David Ramirez</option>
+              <option>Van Morrison</option>
+            </select>
+          
 
-        <label for="album-select">Album:</label>
-        <select name="album-select">
-          <option>Options</option>
-          <option>Ga Ga Ga Ga Ga</option>
-          <option>They Want My Soul</option>
-          <option>Circuital</option>
-          <option>The Waterfall</option>
-          <option>Fleet Foxes</option>
-          <option>Helplessness Blues</option>
-          <option>The Rooster</option>
-          <option>Fables</option>
-          <option>Tupelo Honey</option>
-          <option>Pay The Devil</option>
-        </select>
+          <div>
+            <label for="album-select"><h4>Album:</h4></label>
+          </div>
+            <select name="album-select">
+              <option>Options</option>
+              <option>Ga Ga Ga Ga Ga</option>
+              <option>They Want My Soul</option>
+              <option>Circuital</option>
+              <option>The Waterfall</option>
+              <option>Fleet Foxes</option>
+              <option>Helplessness Blues</option>
+              <option>The Rooster</option>
+              <option>Fables</option>
+              <option>Tupelo Honey</option>
+              <option>Pay The Devil</option>
+            </select>
 
-        <label for="genre">Genre:</label>
-        <table>
-          <tr>
-            <td><input type="checkbox" name="genre" value="rock">Rock</td>
-            <td> <input type="checkbox" name="genre" value="classical">Classical
-          </tr>
-          <tr>
-            <td><input type="checkbox" name="genre" value="Pop">Pop</td>
-            <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
+          <div>
+          <label for="genre"><h4>Genre:</h4></label>
+          </div>
+          <table>
             <tr>
-            <td><input type="checkbox" name="genre" value="Bles">Blues</td>
-            <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
-        </table>
-        <div class="centered">
-          <input type="submit" value="submit">
-        </div>
-      </form>
-    </div>
-    
-    <div id="insertHTML" class="main even-songs odd-songs bold-song">
-      
+              <td><input type="checkbox" name="genre" value="rock">Rock</td>
+              <td> <input type="checkbox" name="genre" value="classical">Classical
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="genre" value="Pop">Pop</td>
+              <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
+              <tr>
+              <td><input type="checkbox" name="genre" value="Bles">Blues</td>
+              <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
+          </table>
+          <div class="centered">
+            <input type="submit" value="submit">
+          </div>
+        </form>
+      </div>
     </div>
 
+    <div id="main-container" class="container-fluid">
+      <div id="insertHTML" class="col-md-12 main even-songs odd-songs bold-song">
+
+      
+      </div>
+      <input type="button" id="more" value="more">
+    </div>
   </div>
+
 
   <!-- Add Music Page -->
 
-    <section id="add-music" class="display-none">
-      <div>
-        <label for="song-name">Song Name:</label><input type="text" id="song-name">
-      </div>
+  <div class="container-fluid">
+    <div class="col-md-3">
+      <section id="add-music" class="display-none">
+        <div>
+          <label for="song-name">Song Name:</label><input type="text" id="song-name">
+        </div>
 
-      <div>
-        <label for="artist">Artist:</label><input type="text" id="artist">
-      </div>
+        <div>
+          <label for="artist">Artist:</label><input type="text" id="artist">
+        </div>
 
-      <div>
-        <label for="album">Album:</label><input type="text" id="album">
-      </div>
+        <div>
+          <label for="album">Album:</label><input type="text" id="album">
+        </div>
 
-        <input type="button" id="add-button" name="add-button" value="Add">
-    </section>
+          <input type="button" id="add-button" name="add-button" value="Add">
+      </section>
 
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="musichistoryR4.js"></script>
+      <div class="col-md-9"></div>
+    </div>
+  </div>
+
+  <script data-main="javascripts/entry" 
+         src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

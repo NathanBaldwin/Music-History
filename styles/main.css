@@ -1,10 +1,18 @@
 body {
   padding-top: 75px;
+  padding-left: 200px;
   font: Helvetica, sans-serif;
   color: #333;
   font-family: Arial;
   text-align: left;
-  background-image: url(../images/leadguitar.jpg); }
+  background-image: url(../images/crowd.jpeg);
+  background-size: cover;
+  background-color: gray;
+  opacity: 0.75;
+  position: static; }
+
+.hard-left {
+  padding-left: 0px; }
 
 nav {
   background-color: #000000;
@@ -20,6 +28,18 @@ nav {
 .nav-color {
   color: green; }
 
+#main-container {
+  background-color: #262729; }
+
+#main-container section {
+  border-bottom: solid black 3px; }
+
+section > h4 {
+  margin-bottom: 10px; }
+
+h2 {
+  margin-top: 5px; }
+
 h4 {
   margin-top: 5px;
   margin-bottom: 2px;
@@ -32,14 +52,21 @@ table {
   padding-left: 0px; }
 
 #sideBar {
+  position: fixed;
+  width: 200px;
+  height: 500px;
   padding-top: 5px;
   padding-left: 25px;
   padding-right: 8px;
   padding-bottom: 20px;
-  background-color: #262626;
+  background-color: #1A1B1C;
   left: 0;
   margin-left: 0;
-  height: 100%; }
+  height: 100%;
+  border-right: solid black 4px; }
+
+.hidden {
+  visibility: hidden; }
 
 .form-style {
   margin-right: 0px;
