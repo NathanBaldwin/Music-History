@@ -3,9 +3,9 @@
 define(["jquery"],
 	function($) {
 		return {
-			firstSongs: function(callBack) {
+			moreSongs: function(callBack) {
 				$.ajax({
-					url:"data/songs.json",
+					url:"data/moreSongs.json",
 					error: function (a, b, c) {
 						console.log(a, b, c);
 					}
