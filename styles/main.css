@@ -80,6 +80,9 @@ input[type="range"] {
   width: 150px;
   margin-bottom: 8px; }
 
+.btn-group {
+  margin-top: 10px; }
+
 /* Add Music Page: */
 #add-music > div > label {
   display: inline;

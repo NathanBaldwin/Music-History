@@ -1,10 +1,13 @@
 
-define(["jquery", "songs", "moreSongs", "getSongsFunction"],
-	function($, songs, moreSongs, getSongs) {
+define(["jquery", "songs", "moreSongs", "getSongsFunction", "populateDom", "addSongFirebase"],
+	function($, songs, moreSongs, getSongs, populateDom, addSong) {
 
 	//populate first songs from songs.json:
 
-	songs.firstSongs(getSongs.getSongs);
+	//songs.firstSongs(getSongs.getSongs);
+	songs.firstSongs(populateDom.populateMain);
+	songs.firstSongs(populateDom.populateArtistSelect);
+	songs.firstSongs(populateDom.populateAlbumSelect);
 
 	// "Add more songs" button functionality
 	$("#more").click(function() {
@@ -72,13 +75,13 @@ function addMusic () {
 
 }
 
-addButton.click(function() {
-	getSongs.addSongs();
-	listMusicPage.show();
-	addMusicPage.hide();
-	$("body").removeClass("hard-left");
+// addButton.click(function() {
+// 	getSongs.addSongs();
+// 	listMusicPage.show();
+// 	addMusicPage.hide();
+// 	$("body").removeClass("hard-left");
 
-});
+// });
 
 
 

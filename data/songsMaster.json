@@ -1,0 +1,36 @@
+{
+	"songList": {
+		"target": {
+			"songTitle": "Don't Make Me a Target",
+			"artist": "Spoon",
+			"album": "Ga Ga Ga Ga Ga"
+		},
+		"legs": {
+			"songTitle": "Legs",
+			"artist": "ZZ Top",
+			"album": "Eliminator"
+		},
+		"breakfast": {
+			"songTitle": "The Logical Song",
+			"artist": "Supertramp",
+			"album": "Breakfast In America"
+		},
+		"helplessness": {
+			"songTitle": "Helplessness Blues",
+			"artist": "Fleet Foxes",
+			"album": "Helplessness Blues"
+		},
+		"wild": {
+			"songTitle": "Wild Night",
+			"artist": "Van Morrison",
+			"album": "Tupelo Honey"
+		},
+		"love": {
+			"songTitle": "Whole Lotta Love",
+			"artist": "Led Zeppelin",
+			"album": "Led Zeppelin II"
+		}
+
+	}
+
+}

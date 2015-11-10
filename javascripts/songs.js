@@ -1,11 +1,10 @@
 
-
 define(["jquery"],
 	function($) {
 		return {
 			firstSongs: function(callBack) {
 				$.ajax({
-					url:"data/songs.json",
+					url:"https://blazing-torch-8825.firebaseio.com/.json",
 					error: function (a, b, c) {
 						console.log(a, b, c);
 					}

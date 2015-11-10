@@ -1,4 +1,4 @@
-define(["jquery"],
+/*define(["jquery"],
 	function($) {
 
 		var songNameInput = $("#song-name");
@@ -17,28 +17,36 @@ define(["jquery"],
 		 			console.log("songTemplate",songTemplate);
 		 			console.log("songs",songs);
 		 			$("#insertHTML").append(songTemplate(songs));
+			 		
+			 		// require(['hbs!../templates/artists'], function(artistTemplate){
+			 		// 	console.log("artistTemplate", artistTemplate);
+			 		// 	console.log("songs",songs);
+			 		// 	$("#artist-select").append(artistTemplate(songs));
+			 		// });
 		 		});
-	 		},
 
-	 		addSongs: function() {
-		 			newSong = {
-		 				"songList" : [ 
-		 					{
-				 				"songTitle": songNameInput.val(),
-				 				"artist": artistNameInput.val(),
-				 				"album": albumNameInput.val()
-		 					} 
-		 				]
-		 			};
+	 		}
+
+	 		// addSongs: function() {
+		 	// 		newSong = {
+		 	// 			"songList" : [ 
+		 	// 				{
+				//  				"songTitle": songNameInput.val(),
+				//  				"artist": artistNameInput.val(),
+				//  				"album": albumNameInput.val()
+		 	// 				} 
+		 	// 			]
+		 	// 		};
 		 			
 
-	 			console.log("newSong", newSong);
+	 		// 	console.log("newSong", newSong);
 
-	 			console.log("this.getSongs", this.getSongs);
-	 			this.getSongs(newSong);
+	 		// 	console.log("this.getSongs", this.getSongs);
+	 		// 	this.getSongs(newSong);
 
 
-	 			}
-	 		};
+	 		// 	}
+	 		// };
+	 	}
 
-});
+}); */
