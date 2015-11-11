@@ -1,7 +1,10 @@
-<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artists <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-		{{#each songList}}
-    		<li><a href="#">{{artist}}</a></li>
-		{{/each}}
-  </ul>
+<div class="form-group">
+      <select id="selected-artist" class="form-control">
+        <option>Artists</option>
+        {{#each []}}
+        <option><a href="#">{{[]}}</a></option>
+        {{/each}}
+      </select>
+</div>
+
+
