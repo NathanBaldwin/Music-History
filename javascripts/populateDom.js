@@ -2,6 +2,7 @@
 define(["jquery", "lodash"],
 	function($, _) {
 		return {
+
 			populateMain: function (firstSongs) {
 				console.log("populate main fired!", firstSongs);
 
@@ -17,10 +18,10 @@ define(["jquery", "lodash"],
 					var allAlbums = [];
 
 		 			for (var prop in currentSongList) {
-						// console.log("prop", prop);
-						// console.log("currentSongList[prop]", currentSongList[prop]);
+						
 						var currentArtist = currentSongList[prop].artist;
 						//console.log("currentArtist", currentArtist);
+						
 						var currentAlbum = currentSongList[prop].album;
 						//console.log("currentAlbum", currentAlbum);
 						

@@ -14,13 +14,11 @@ define(["jquery", "populateDom"],
 				var filteredSongArray = [];
 
 				for (var prop in currentSongList) {
-					//console.log("prop", prop);
-					// console.log("allSongs[prop]", allSongs[prop]);
-					// console.log("allSongs[prop].artist", allSongs[prop].artist);
+					
 					if (allSongs[prop].artist === selectedArtist) {
-						//console.log("########I FOUND A MATCH!!#########", allSongs[prop].artist);
-						var titleOfmatch = prop;
-						//console.log("titleOfmatch", titleOfmatch);
+
+						console.log("########I FOUND A MATCH!!#########", allSongs[prop].artist);
+		
 						var objectOfmatch = allSongs[prop];
 						console.log("objectOfmatch", objectOfmatch);
 
@@ -44,13 +42,10 @@ define(["jquery", "populateDom"],
 				var filteredSongArray = [];
 
 				for (var prop in currentSongList) {
-					// console.log("prop", prop);
-					// console.log("allSongs[prop]", allSongs[prop]);
-					// console.log("allSongs[prop].album", allSongs[prop].album);
+					
 					if (allSongs[prop].album === selectedAlbum) {
-						//console.log("########I FOUND A MATCH!!#########", allSongs[prop].album);
-						var titleOfmatch = prop;
-						// console.log("titleOfmatch", titleOfmatch);
+						console.log("########I FOUND A MATCH!!#########", allSongs[prop].album);
+						
 						var objectOfmatch = allSongs[prop];
 						console.log("objectOfmatch", objectOfmatch);
 
@@ -75,18 +70,14 @@ define(["jquery", "populateDom"],
 				var filteredSongArray = [];
 
 				for (var prop in currentSongList) {
-					// console.log("prop", prop);
-					// console.log("allSongs[prop]", allSongs[prop]);
-					// console.log("allSongs[prop].album", allSongs[prop].album);
+					
 					if (allSongs[prop].album === selectedAlbum && allSongs[prop].artist === selectedArtist) {
-						// console.log("########I FOUND A MATCH!!#########", allSongs[prop].album);
-						var titleOfmatch = prop;
-						// console.log("titleOfmatch", titleOfmatch);
+						console.log("########I FOUND A MATCH!!#########", allSongs[prop].album);
+						
 						var objectOfmatch = allSongs[prop];
-						// console.log("objectOfmatch", objectOfmatch);
+						console.log("objectOfmatch", objectOfmatch);
 
 						filteredSongArray.push(objectOfmatch);
-
 
 						filteredSongList = {
 							"songList": filteredSongArray
