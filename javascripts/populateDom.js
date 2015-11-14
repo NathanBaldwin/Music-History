@@ -52,6 +52,34 @@ define(["jquery", "lodash"],
 		 			$("#insertHTML").html("");
 		 			$("#insertHTML").append(songTemplate(firstSongs));
 		 		});
+		 	},
+
+		 	populateAddSongModal: function () {
+		 		var songNameInput = $("#song-name");
+				var artistNameInput = $("#artist");
+				var albumNameInput = $("#album");
+
+				var newSong = {
+					songTitle: songNameInput.val(),
+					artist: artistNameInput.val(),
+					album: albumNameInput.val()
+					};
+
+		 		require(['hbs!../templates/addSongModal'], function(addSongModalTemplate){
+		 			console.log("addSongModalTemplate",addSongModalTemplate);
+		 			
+		 			$("#new-song-data").html(addSongModalTemplate({newSong}));
+		 		});
+		 	},
+
+		 	populateDeleteSongModal: function (deletedSong) {
+		 		console.log("deletedSong", deletedSong);
+		 		
+		 		require(['hbs!../templates/deleteSongModal'], function(deleteSongModalTemplate){
+		 			console.log("deleteSongModalTemplate", deleteSongModalTemplate);
+		 			
+		 			$("#delete-message").html(deleteSongModalTemplate({deletedSong}));
+		 		});
 		 	}
 		 };
 	});

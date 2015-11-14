@@ -24,11 +24,25 @@ define(["jquery", "songs", "moreSongs", "populateDom", "addSongFirebase", "filte
 	$("body").on("click", ".delete", function() {
 		console.log("unique song ID", this.id);
 		var uniqueSongID = this.id;
+		console.log("event", event);
+		console.log("this.parent().text(): ", $(this).parent().text());
+		console.log("this.parent().prev().text(): ", $(this).parent().prev().text());
+
+		var deletedSongName = $(this).parent().prev().text();
+		var deletedSongAndAlbum = $(this).parent().text();
+
+		var deletedSong = {
+					songTitle: deletedSongName,
+					artistAndAlbum: deletedSongAndAlbum
+					};
+
 
 		addSong.deleteSong(uniqueSongID)
 		.then(function(deleteInfo) {
 			console.log("delete promise resolved! Heres your delete info: ", 
 				deleteInfo);
+			populateDom.populateDeleteSongModal(deletedSong);
+			$("#delete-messsage-modal").modal("show");
 		});
 	});
 
@@ -107,17 +121,25 @@ define(["jquery", "songs", "moreSongs", "populateDom", "addSongFirebase", "filte
 	var songNameInput = $("#song-name");
 	var artistNameInput = $("#artist");
 	var albumNameInput = $("#album");
+	var saveSong = $("#save-song");
 
 	addButton.click(function() {
+		populateDom.populateAddSongModal();
 		$("#added-music-modal").modal("show");
-		// addSong.addSong()
-		// .then(function(newSong) {
-		// 	console.log("new song sent to DOM", newSong);
-		// });
 
-		// listMusicPage.show();
-		// addMusicPage.hide();
-		// $("body").removeClass("hard-left");
+	});
+
+	saveSong.click(function() { 
+		console.log("you clicked save song!!");
+		addSong.addSong()
+		.then(function(newSong) {
+			console.log("new song sent to DOM", newSong);
+		});
+
+		$("#added-music-modal").modal("hide");
+		listMusicPage.show();
+		addMusicPage.hide();
+		$("body").removeClass("hard-left");
 	});
 
 });
