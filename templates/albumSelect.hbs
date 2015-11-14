@@ -1,8 +1,8 @@
 <div class="form-group">
       <select id="selected-album" class="form-control">
         <option>Albums</option>
-        {{#each []}}
-        <option><a href="#">{{[]}}</a></option>
+        {{#each this}}
+        <option><a href="#">{{this}}</a></option>
         {{/each}}
       </select>
 </div>
