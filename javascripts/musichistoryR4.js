@@ -1,6 +1,6 @@
 
-define(["jquery", "songs", "moreSongs", "getSongsFunction", "populateDom", "addSongFirebase", "filterSongs", "firebase"],
-	function($, songs, moreSongs, getSongs, populateDom, addSong, filterSongs, firebase) {
+define(["jquery", "songs", "moreSongs", "populateDom", "addSongFirebase", "filterSongs", "firebase"],
+	function($, songs, moreSongs, populateDom, addSong, filterSongs, firebase) {
 
 	//populate first songs from firebase on page load:
 
@@ -18,10 +18,6 @@ define(["jquery", "songs", "moreSongs", "getSongsFunction", "populateDom", "addS
 		populateDom.populateMain(allSongsObject);
 	});
 
-	// "Add more songs" button functionality
-	$("#more").click(function() {
-		moreSongs.moreSongs(getSongs.getSongs);
-	});
 
 	//Delete button functionality:
 
@@ -113,14 +109,15 @@ define(["jquery", "songs", "moreSongs", "getSongsFunction", "populateDom", "addS
 	var albumNameInput = $("#album");
 
 	addButton.click(function() {
-		addSong.addSong()
-		.then(function(newSong) {
-			console.log("new song sent to DOM", newSong);
-		});
+		$("#added-music-modal").modal("show");
+		// addSong.addSong()
+		// .then(function(newSong) {
+		// 	console.log("new song sent to DOM", newSong);
+		// });
 
-		listMusicPage.show();
-		addMusicPage.hide();
-		$("body").removeClass("hard-left");
+		// listMusicPage.show();
+		// addMusicPage.hide();
+		// $("body").removeClass("hard-left");
 	});
 
 });
