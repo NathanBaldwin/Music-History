@@ -1,0 +1,15 @@
+<section id="add-music">
+  <div>
+    <label for="song-name">Song Name:</label><input type="text" id="song-name" ng-model="newSong.songTitle">
+  </div>
+
+  <div>
+    <label for="artist">Artist:</label><input type="text" id="artist" ng-model="newSong.artist">
+  </div>
+
+  <div>
+    <label for="album">Album:</label><input type="text" id="album" ng-model="newSong.album">
+  </div>
+
+    <input type="button" id="add-button" name="add-button" value="Add" ng-click="addSong()">
+</section>

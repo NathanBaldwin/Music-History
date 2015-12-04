@@ -9,14 +9,15 @@
 
 </head>
 
-<body>
+<body ng-app="populateSongs">
+
   
   <nav class="fixed">
     <div id="menuBar">
       <ul class="navigation">
-        <li id="list-music">List Music</li>
+        <li id="list-music"><a href="#/songs/songList">List Music</a></li>
         |
-        <li id="add-music-button">Add Music</li>
+        <li id="add-music-button"> <a href="#/songs/addSong">Add Music</a></li>
         |
         <li>Profile</li>
       </ul>
@@ -34,83 +35,19 @@
       </ul>
     </div>
   </nav>
+
+  <div ng-view></div>
   
-  <div id="fullWidthDiv">
-    <div id="sideBar" class="bordered">
-      <form action="musicform.html" method="POST">
+    <script src="lib/bower_components/angular/angular.min.js"></script>
+    <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="lib/bower_components/firebase/firebase.js"></script>
+    <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+  <!-- // <script src="musichistoryR4.js"></script> -->
+    <script src="app/angularRefactor.js"></script>
+    <script src="app/Factories/getSongs.js"></script>
 
-        <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
-
-        <label for="artist-select">Artist:</label>
-        <select name="artist-select">
-          <option>Options</option>
-          <option>Spoon</option>
-          <option>My Morning Jacket</option>
-          <option>Fleet Foxes</option>
-          <option>David Ramirez</option>
-          <option>Van Morrison</option>
-        </select>
-
-        <label for="album-select">Album:</label>
-        <select name="album-select">
-          <option>Options</option>
-          <option>Ga Ga Ga Ga Ga</option>
-          <option>They Want My Soul</option>
-          <option>Circuital</option>
-          <option>The Waterfall</option>
-          <option>Fleet Foxes</option>
-          <option>Helplessness Blues</option>
-          <option>The Rooster</option>
-          <option>Fables</option>
-          <option>Tupelo Honey</option>
-          <option>Pay The Devil</option>
-        </select>
-
-        <label for="genre">Genre:</label>
-        <table>
-          <tr>
-            <td><input type="checkbox" name="genre" value="rock">Rock</td>
-            <td> <input type="checkbox" name="genre" value="classical">Classical
-          </tr>
-          <tr>
-            <td><input type="checkbox" name="genre" value="Pop">Pop</td>
-            <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
-            <tr>
-            <td><input type="checkbox" name="genre" value="Bles">Blues</td>
-            <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
-        </table>
-        <div class="centered">
-          <input type="submit" value="submit">
-        </div>
-      </form>
-    </div>
-    
-    <div id="insertHTML" class="main even-songs odd-songs bold-song">
-      
-    </div>
-
-  </div>
-
-  <!-- Add Music Page -->
-
-    <section id="add-music" class="display-none">
-      <div>
-        <label for="song-name">Song Name:</label><input type="text" id="song-name">
-      </div>
-
-      <div>
-        <label for="artist">Artist:</label><input type="text" id="artist">
-      </div>
-
-      <div>
-        <label for="album">Album:</label><input type="text" id="album">
-      </div>
-
-        <input type="button" id="add-button" name="add-button" value="Add">
-    </section>
-
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="musichistoryR4.js"></script>
+    <script src="app/Controllers/songList.js"></script>
+    <script src="app/Controllers/addSong.js"></script>
 
 </body>
 </html>

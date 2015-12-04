@@ -11,14 +11,12 @@ function inputSongs (songs) {
 	}
 }
 
-$.ajax({
-	url:"data/songs.json",
-	error: function (a, b, c) {
-		console.log(a, b, c)
-	}
-
-
-}).done(inputSongs);
+// $.ajax({
+// 	url:"data/songs.json",
+// 	error: function (a, b, c) {
+// 		console.log(a, b, c)
+// 	}
+// }).done(inputSongs);
 
 var songs = [];
 

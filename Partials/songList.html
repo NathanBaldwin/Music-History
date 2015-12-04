@@ -1,0 +1,58 @@
+<section>
+  <div id="fullWidthDiv">
+    <div id="sideBar" class="bordered">
+      <form action="musicform.html" method="POST">
+
+        <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
+
+        <label for="artist-select">Artist:</label>
+        <select name="artist-select">
+          <option>Options</option>
+          <option ng-repeat="song in songs">{{song.artist}}</option>
+        </select>
+
+        <label for="album-select">Album:</label>
+        <div >
+          <select name="album-select">
+            <option>Options</option>
+            <option ng-repeat="song in songs">{{song.album}}</option>
+          </select>
+        </div>
+
+        <label for="genre">Genre:</label>
+        <table>
+          <tr>
+            <td><input type="checkbox" name="genre" value="rock">Rock</td>
+            <td> <input type="checkbox" name="genre" value="classical">Classical
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="genre" value="Pop">Pop</td>
+            <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
+            <tr>
+            <td><input type="checkbox" name="genre" value="Bles">Blues</td>
+            <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
+        </table>
+        <div class="centered">
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </div>
+    
+    <div id="insertHTML" class="main even-songs odd-songs bold-song">
+
+    <div ng-repeat="song in songs">
+      <div>
+        
+       <h3>{{ song.songTitle }}</h3>
+       <h4>Artist: {{song.artist}}</h4>
+       <h4>Album: {{song.album}}</h4>
+      </div>
+    
+      
+    </div>
+      
+    </div>
+
+  </div>
+    
+  </section>
