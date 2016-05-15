@@ -4,16 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Nashville Software School</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link rel="stylesheet" type="text/css" href="styleR4.css">
 
 </head>
 
-<body>
-  
-  <div id="container">
+<body ng-app="populateSongs">
 
-  </div>
-  <nav>
+  
+  <nav class="fixed">
+    <div id="menuBar">
+      <ul class="navigation">
+        <li id="list-music"><a href="#/songs/list">List Music</a></li>
+        |
+        <li id="add-music-button"> <a href="#/songs/addSong">Add Music</a></li>
+        |
+        <li>Profile</li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="hidden">
     <div id="menuBar">
       <ul class="navigation">
         <li class="viewMusic">View Music</li>
@@ -24,78 +35,21 @@
       </ul>
     </div>
   </nav>
+
+  <div ng-view></div>
   
-  <div id="fullWidthDiv">
-    <div>
-      <div id="sideBar" class="bordered">
-        <form action="musicform.html" method="POST">
+    <script src="lib/bower_components/angular/angular.min.js"></script>
+    <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="lib/bower_components/firebase/firebase.js"></script>
+    <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <!-- // <script src="musichistoryR4.js"></script> -->
+    <script src="app/angularRefactor.js"></script>
+    <script src="app/Factories/getSongs.js"></script>
 
-          <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
-
-          <label for="artist-select">Artist:</label>
-          <select name="artist-select">
-            <option>Options</option>
-            <option>Spoon</option>
-            <option>My Morning Jacket</option>
-            <option>Fleet Foxes</option>
-            <option>David Ramirez</option>
-            <option>Van Morrison</option>
-          </select>
-
-          <label for="album-select">Album:</label>
-          <select name="album-select">
-            <option>Options</option>
-            <option>Ga Ga Ga Ga Ga</option>
-            <option>They Want My Soul</option>
-            <option>Circuital</option>
-            <option>The Waterfall</option>
-            <option>Fleet Foxes</option>
-            <option>Helplessness Blues</option>
-            <option>The Rooster</option>
-            <option>Fables</option>
-            <option>Tupelo Honey</option>
-            <option>Pay The Devil</option>
-          </select>
-
-          <label for="genre">Genre:</label>
-          <table>
-            <tr>
-              <td><input type="checkbox" name="genre" value="rock">Rock</td>
-              <td> <input type="checkbox" name="genre" value="classical">Classical
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="genre" value="Pop">Pop</td>
-              <td><input type="checkbox" name="genre" value="Pop">Jazz</td>
-              <tr>
-              <td><input type="checkbox" name="genre" value="Bles">Blues</td>
-              <td><input type="checkbox" name="genre" value="HipHop">Hip Hop</td>
-          </table>
-          <div class="centered">
-            <input type="submit" value="submit">
-          </div>
-        </form>
-      </div>
-    </div>
-    
-    <div id="insertHTML">
-     Cat burglar
-
-      
-    </div>
-
-    <div class="main">
-      <h2>Don't Make Me a Target</h2>
-      <h4>Spoon | Ga Ga Ga Ga Ga | Rock</h4>
-      <h2>Spring</h2>
-      <h4>My Morning Jacket | Waterfall | Rock</h4>
-      <h2>Wild Night</h2>
-      <h4>Van Morrison | Tupelo Honey | Rock</h4>
-      <h2>Helplessness Blues</h2>
-      <h4>Fleet Foxes | Helplessness Blues | Rock</h4>
-    </div>
-  </div>
-
-  <script src="musichistory.js"></script>
+    <script src="app/Controllers/songList.js"></script>
+    <script src="app/Controllers/addSong.js"></script>
+    <script src="app/Controllers/songDetailCtrl.js"></script>
 
 </body>
 </html>

@@ -1,23 +1,21 @@
-app.controller("populateMySongs", ["$q", "$http", "$scope", "getMySongs",  function($q, $http, $scope, getMySongs) {
-	
+app.controller("populateMySongs", ["$q", "$http", "$scope", "$firebaseArray", function($q, $http, $scope, $firebaseArray) {
 
-getMySongs.loadSongs().then(function() {
-  $scope.songs = getMySongs.getSongs();
-}, function(error) {
-  console.log("Failed", error);
-})  
+var songListRef = new Firebase("https://blazing-torch-8825.firebaseio.com/songList");
 
-// getSongs().then(function (songs) {
-//     console.log("songs", songs);
-//     //console.log("pre-concat allSongsArray", $scope.allSongsArray);
-//     getMoreSongs().then(function (moreSongsObject) {
-//       console.log("moreSongsObject", moreSongsObject);
-//       // $scope.allSongsArray = songs.concat(moreSongsObject);
-//       // console.log("allSongsArray", $scope.allSongsArray);
-//     })
-//   }, function (error) {
-//     console.log("Failed");
-//   });
+$scope.artist = "";
+
+$scope.songs = $firebaseArray(songListRef);
+
+$scope.songs.$loaded().then(function(data) {
+	console.log("data", data);
+})
+
+// getMySongs.loadSongs().then(function() {
+//   $scope.songs = getMySongs.getSongs();
+// }, function(error) {
+//   console.log("Failed", error);
+// })  
+
 
 
 }]);

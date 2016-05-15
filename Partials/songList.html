@@ -3,18 +3,17 @@
     <div id="sideBar" class="bordered">
       <form action="musicform.html" method="POST">
 
+        <input type="text" ng-model="search">
+
         <label for="song-length">Song Length:</label><input type="range" name="song-length" min="0" max="10" step=".5">
 
         <label for="artist-select">Artist:</label>
-        <select name="artist-select">
-          <option>Options</option>
-          <option ng-repeat="song in songs">{{song.artist}}</option>
-        </select>
+        <select name="artist-select" ng-model="artistDropdown" ng-options="song.artist for song in songs"></select>
 
         <label for="album-select">Album:</label>
         <div >
           <select name="album-select">
-            <option>Options</option>
+            <option selected>Options</option>
             <option ng-repeat="song in songs">{{song.album}}</option>
           </select>
         </div>
@@ -40,10 +39,10 @@
     
     <div id="insertHTML" class="main even-songs odd-songs bold-song">
 
-    <div ng-repeat="song in songs">
+    <div ng-repeat="song in songs | filter: artistDropdown.artist">
       <div>
         
-       <h3>{{ song.songTitle }}</h3>
+       <h3><a href="#/songs/{{ song.$id }}">{{ song.songTitle }}</a></h3>
        <h4>Artist: {{song.artist}}</h4>
        <h4>Album: {{song.album}}</h4>
       </div>
